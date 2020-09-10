@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Roman Ievlev](https://up.htmlacademy.ru/htmlcss/29/user/454089).
-* Наставник: `Павел Бубликов`.
+* Наставник: `Павел Бубликов`(https://htmlacademy.ru/profile/pbuba).
 
 ---
 

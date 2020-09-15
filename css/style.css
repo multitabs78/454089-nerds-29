@@ -1,0 +1,84 @@
+:root {
+  --black: #000000;
+  --dark-blue: #283136;
+  --basic-dark-grey: #4D4D4D;
+  --lead-grey: #666666;
+  --dark-grey: #D7DCDF;
+  --grey67: #ABABAB;
+  --basic-grey: #EEEEEE;
+  --light-grey: #888888;
+  --white: #FFFFFF;
+  --red: #FB565A;
+  --green: #00CA74;
+  --yellow: #EFC849;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--dark-blue);
+  background-color: var(--light-grey);
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-navigation {
+  color: var(--black);
+  line-height: 30px;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.main-navigation-wrapper {
+  background: var(--basic-grey);
+}
+
+.site-navigation {
+  list-style: none;
+  text-align: center;
+}
+
+.site-navigation-item {
+  display: inline-block;
+}
+.work-list {
+  list-style: none;
+  text-align: center;
+}
+
+.work-list h3 {
+  font-size: 24;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--black);
+}
+.work-item {
+  display: inline-block;
+}
+
+/*workspace*/
+
+.button {
+  font: inherit;
+  text-align: center;
+  color: var(--white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--red);
+  border: none;
+}

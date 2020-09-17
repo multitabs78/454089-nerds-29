@@ -10,20 +10,22 @@
   --white: #FFFFFF;
   --red: #FB565A;
   --green: #00CA74;
+  --dark-green: #00BC6C;
+  --very-dark-green: #00AA62;
   --yellow: #EFC849;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  margin-bottom: 40px;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
   color: var(--dark-blue);
-  background-color: var(--light-grey);
+  background-color: transparent;
   background-position: top center;
-  background-repeat: no-repeat;
 }
 
 a {
@@ -34,6 +36,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
+/* header*/
 
 .main-navigation {
   color: var(--black);
@@ -51,34 +56,98 @@ img {
   text-align: center;
 }
 
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: var(--red);
+}
+
+.site-navigation a:active {
+  color: var(--black);
+  opacity: 0.3;
+}
+
 .site-navigation-item {
   display: inline-block;
 }
-.work-list {
-  list-style: none;
-  text-align: center;
+
+/* index-main*/
+
+.carousel {
+  background: var(--basic-grey);
 }
 
-.work-list h3 {
-  font-size: 24;
+.work-list {
+  list-style: none;
+  text-align: left;
+}
+
+.work-list-item h3 {
+  font-size: 24px;
   font-weight: 700;
   line-height: 30px;
-  text-align: left;
   text-transform: uppercase;
   color: var(--black);
 }
-.work-item {
-  display: inline-block;
+.work-list-item {
 }
 
-/*workspace*/
+.work-list-container {
+  width: 300px;
+}
+
+/*buttons*/
 
 .button {
   font: inherit;
+  line-height: 18px;
   text-align: center;
   color: var(--white);
-  vertical-align: middle;
   text-transform: uppercase;
   background-color: var(--red);
-  border: none;
+  border-radius: 3px;
+}
+
+.button-web {
+
+}
+
+.button-app {
+  background-color: var(--green);
+}
+
+.work-list a:hover,
+.work-list a:focus {
+  background-color: var(--dark-green);
+}
+
+.work-list a:active {
+  background-color: var(very-dark-green);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.button-presentation {
+  background-color: var(--yellow);
+
+}
+
+/*catalog-main*/
+
+.page-numbers {
+  list-style: none;
+}
+/*footer*/
+
+.page-footer {
+
+}
+
+.contact-phone {
+  color: inherit;
+}
+
+.social-links {
+  width: 81px;
+  height: 81px;
+  background: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
+  list-style: none;
 }

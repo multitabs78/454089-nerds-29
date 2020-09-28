@@ -3,16 +3,20 @@
   --dark-blue: #283136;
   --basic-dark-grey: #4D4D4D;
   --lead-grey: #666666;
-  --dark-grey: #D7DCDF;
-  --grey67: #ABABAB;
+  --very-dark-grey: #D5D5D5;
+  --dark-grey: #DFDFDF;
   --basic-grey: #EEEEEE;
-  --light-grey: #888888;
+  --light-grey: #E1E1E1;
   --white: #FFFFFF;
   --red: #FB565A;
+  --dark-red: #E74246;
+  --very-dark-red: #D7373B;
   --green: #00CA74;
   --dark-green: #00BC6C;
   --very-dark-green: #00AA62;
   --yellow: #EFC849;
+  --dark-yellow: #EAB534;
+  --very-dark-yellow: #E5A722;
 }
 
 body {
@@ -24,7 +28,7 @@ body {
   line-height: 24px;
   font-weight: 500;
   color: var(--dark-blue);
-  background-color: transparent;
+  background-color: var(--white);
   background-position: top center;
 }
 
@@ -37,9 +41,7 @@ img {
   height: auto;
 }
 
-
 /* header*/
-
 .main-navigation {
   color: var(--black);
   line-height: 30px;
@@ -56,24 +58,19 @@ img {
   text-align: center;
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus {
+.site-navigation__link:hover,
+.site-navigation__link:focus {
   color: var(--red);
 }
 
-.site-navigation a:active {
+.site-navigation__link:active {
   color: var(--black);
   opacity: 0.3;
 }
 
-.site-navigation-item {
-  display: inline-block;
-}
-
 /* index-main*/
-
 .carousel {
-  background: var(--basic-grey);
+  background-color: var(--basic-grey);
 }
 
 .work-list {
@@ -81,22 +78,35 @@ img {
   text-align: left;
 }
 
-.work-list-item h3 {
+.work-list__title {
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
   color: var(--black);
 }
-.work-list-item {
-}
 
 .work-list-container {
   width: 300px;
+  height: auto;
+}
+
+.description__list {
+  list-style: none;
+}
+
+.features__list {
+  list-style: none;
+}
+
+.features__list--item {}
+
+.features__list--item-grade {
+  font: var(--black);
+  font-size: 45px;
 }
 
 /*buttons*/
-
 .button {
   font: inherit;
   line-height: 18px;
@@ -107,47 +117,108 @@ img {
   border-radius: 3px;
 }
 
-.button-web {
+.button:hover,
+.button:focus {
+  background-color: var(--dark-red);
+}
 
+.button:active {
+  background-color: var(--very-dark-red);
+  color: rgba(var(--white), 0.3);
 }
 
 .button-app {
   background-color: var(--green);
 }
 
-.work-list a:hover,
-.work-list a:focus {
+.button-app:hover,
+.button-app:focus {
   background-color: var(--dark-green);
 }
 
-.work-list a:active {
-  background-color: var(very-dark-green);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+.button-app:active {
+  background-color: var(--very-dark-green);
+  color: rgba(var(--white), 0.3);
 }
 
 .button-presentation {
   background-color: var(--yellow);
+}
 
+.button-presentation:hover,
+.button-presentation:focus {
+  background-color: var(--dark-yellow);
+}
+
+.button-presentation:active {
+  background-color: var(--very-dark-yellow);
+  color: rgba(var(--white), 0.3);
+}
+
+.partners__link {
+  opacity: 0.2;
+}
+
+.partners__link:hover,
+.partners__link:focus {
+  opacity: 1;
+}
+
+.partners__link:active {
+  opacity: 0.1;
 }
 
 /*catalog-main*/
-
-.page-numbers {
+.catalog-list {
   list-style: none;
 }
-/*footer*/
 
-.page-footer {
+.pagination {}
 
+.pagination-button {
+  width: 50px;
+  height: 50px;
+  margin: 0 4px;
+  background: var(--basic-grey);
+  border-radius: 3px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--black);
+  padding: 8px 16px;
 }
 
-.contact-phone {
+.pagination-button:hover {
+  background-color: var(--dark-grey);
+}
+
+.pagination-button:active {
+  background-color: var(--very-dark-grey);
+  color: rgba(var(--black), 0.3);
+}
+
+/*footer*/
+.contacts-phone {
   color: inherit;
 }
 
-.social-links {
+.social-links__item {
+  background-color: var(--light-grey);
+  border-radius: 50%;
   width: 81px;
   height: 81px;
-  background: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
   list-style: none;
 }
+
+.social-links__item:focus,
+.social-links__item:hover {
+  background-color: var(--dark-red);
+}
+
+.social-links__item:active {
+  background-color: var(--very-dark-red);
+}
+
+ .social-links__icon:active {
+   opacity: 0.3;
+ }

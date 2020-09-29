@@ -11,16 +11,16 @@
 
 <body class="page-body">
   <header class="main-header">
-    <nav class="main-navigation">
-      <a class="main-logo" href="index.html">
-        <img src="img/main/nerds-logo.svg" width="160" height="65" alt="Логотип нердс">
+    <nav class="main-header__nav">
+      <a class="main-header__logo" href="index.html">
+        <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип нердс">
       </a>
-      <ul class="site-navigation">
-        <li class="site-navigation__item"><a class="site-navigation__link" href="#">Студия</a></li>
-        <li class="site-navigation__item"><a class="site-navigation__link" href="#">Клиенты</a></li>
-        <li class="site-navigation__item"><a class="site-navigation__link site-navigation__link--current">Магазин</a></li>
-        <li class="site-navigation__item"><a class="site-navigation__link" href="#">Контакты</a></li>
-        <li class="site-navigation__item"><a class="site-navigation__link" href="#"><img src="img/main/cart-icon.svg" alt="Корзина">Корзина</a></li>
+      <ul class="main-navigation">
+        <li class="main-navigation__item"><a class="main-navigation__link" href="#">Студия</a></li>
+        <li class="main-navigation__item"><a class="main-navigation__link" href="#">Клиенты</a></li>
+        <li class="main-navigation__item"><a class="main-navigation__link" href="catalog.html">Магазин</a></li>
+        <li class="main-navigation__item"><a class="main-navigation__link" href="#">Контакты</a></li>
+        <li class="main-navigation__item"><a class="main-navigation__link main-navigation__user-cart" href="#">Корзина</a></li>
       </ul>
     </nav>
     <h1 class="catalog-title">Магазин готовых шаблонов</h1>
@@ -99,7 +99,7 @@
       <h2 class="hidden-title">Каталог работ</h2>
       <ul class="catalog-list">
         <li class="catalog-list__item product-sample">
-          <img class="product-sample__img" src="img/catalog/img-sedona.jpg" width="359" height="578" alt="Sedona">
+          <img class="product-sample__img" src="img/img-sedona.jpg" width="359" height="578" alt="Sedona">
           <div class="product-sample__description">
             <h3 class="product-sample__title">Sedona</h3>
             <p class="product-sample__text">Информационный сайт для туристов</p>
@@ -108,46 +108,46 @@
         </li>
 
         <li class="catalog-list__item product-sample">
-          <img class="product-sample__img" src="img/catalog/img-pink.jpg" width="358" height="578" alt="Pink App">
+          <img class="product-sample__img" src="img/img-pink.jpg" width="358" height="578" alt="Pink App">
           <div class="product-sample__description">
             <h3 class="product-sample__title">Pink App</h3>
-            <p class="product-sample__text">text</p>
+            <p class="product-sample__text">Продуктовый лендинг приложения для iOS и Android</p>
             <a class="button product-sample__button" href="#">9 900 &#8381;</a>
           </div>
         </li>
 
         <li class="catalog-list__item product-sample">
-          <img class="product-sample__img" src="img/catalog/img-barbershop.jpg" width="359" height="578" alt="Barbershop BORODINSKI">
+          <img class="product-sample__img" src="img/img-barbershop.jpg" width="359" height="578" alt="Barbershop BORODINSKI">
           <div class="product-sample__description">
             <h3 class="product-sample__title">Barbershop BORODINSKI</h3>
-            <p class="product-sample__text">text</p>
+            <p class="product-sample__text">Сайт салона красоты. Для мужчин, да.</p>
             <a class="button product-sample__button" href="#">9 900 &#8381;</a>
           </div>
         </li>
 
         <li class="catalog-list__item product-sample">
-          <img class="product-sample__img" src="img/catalog/img-mishka.jpg" width="359" height="578" alt="MISHKA">
+          <img class="product-sample__img" src="img/img-mishka.jpg" width="359" height="578" alt="MISHKA">
           <div class="product-sample__description">
             <h3 class="product-sample__title">MISHKA</h3>
-            <p class="product-sample__text">text</p>
+            <p class="product-sample__text">Интернет-магазин вязаных игрушек</p>
             <a class="button product-sample__button" href="#">9 900 &#8381;</a>
           </div>
         </li>
 
         <li class="catalog-list__item product-sample">
-          <img class="product-sample__img" src="img/catalog/img-aplus.jpg" width="359" height="578" alt="A Plus">
+          <img class="product-sample__img" src="img/img-aplus.jpg" width="359" height="578" alt="A Plus">
           <div class="product-sample__description">
             <h3 class="product-sample__title">A Plus</h3>
-            <p class="product-sample__text">text</p>
+            <p class="product-sample__text">Лендинг курсов повышения квалификации</p>
             <a class="button product-sample__button" href="#">9 900 &#8381;</a>
           </div>
         </li>
 
         <li class="catalog-list__item product-sample">
-          <img class="product-sample__img" src="img/catalog/img-kvast.jpg" width="362" height="580" alt="КВАСТ">
+          <img class="product-sample__img" src="img/img-kvast.jpg" width="362" height="580" alt="КВАСТ">
           <div class="product-sample__description">
             <h3 class="product-sample__title">КВАСТ</h3>
-            <p class="product-sample__text">text</p>
+            <p class="product-sample__text">Промо-сайт производителя крафтового кваса</p>
             <a class="button product-sample__button" href="#">9 900 &#8381;</a>
           </div>
         </li>
@@ -165,7 +165,7 @@
 
   <footer class="page-footer main-footer">
     <section class="contacts">
-      <h2 class="hidden-title">Контакты</h2>
+      <h2 class="visually_hidden">Контакты</h2>
       <p class="contacts__title">Nёrds design studio</p>
       <p class="contacts__text">191186, Санкт-Петербург, <br>
         ул. Б. Конюшенная, д. 19/8<br>
@@ -175,14 +175,14 @@
     </section>
 
     <section class="social">
+      <h2 class="visually_hidden">Соцсети</h2>
       <ul class="social-links">
-        <li class="social-links__item"><a href="#"><img class="social-links__icon" src="img/main/vk-icon.png" alt="Мы в контакте"> </a> </li>
-        <li class="social-links__item"><a href="#"><img class="social-links__icon" src="img/main/fb-icon.png" alt="Мы в фейсбук"> </a> </li>
-        <li class="social-links__item"><a href="#"><img class="social-links__icon" src="img/main/insta-icon.png" alt="Мы в инстаграм"> </a> </li>
+        <li class="social-links__item"><a class="social-links__link social-links__link--vk" href="http://vk.com"><span class="visually_hidden">Мы в контакте</span></a></li>
+        <li class="social-links__item"><a class="social-links__link social-links__link--fb" href="http://facebook.com"><span class="visually_hidden">Мы в фейсбук</span></a></li>
+        <li class="social-links__item"><a class="social-links__link social-links__link--insta" href="http://instagram.com"><span class="visually_hidden">Мы в инстаграм</span></a></li>
       </ul>
-      <h2 class="hidden-title">Скидки </h2>
-      <p class="social-offer__title">Давайте дружить, это выгодно!</p>
-      <p class="social-offer__text">Скидка 10% для друзей из социальных сетей.</p>
+      <p class="social__offer-title">Давайте дружить, это выгодно!</p>
+      <p class="social__offer-text">Скидка 10% для друзей из социальных сетей.</p>
     </section>
   </footer>
 

@@ -22,24 +22,24 @@
 /* Variables */
 :root {
   --black: #000000;
-  --dark-blue: #283136;
-  --basic-dark-grey: #4D4D4D;
-  --lead-grey: #666666;
-  --very-dark-grey: #D5D5D5;
-  --dark-grey: #DFDFDF;
-  --basic-grey: #EEEEEE;
-  --light-grey: #E1E1E1;
+  --regular-text: #283136;
+  --pagination-active: #D5D5D5;
+  --pagination-hover: #DFDFDF;
+  --bg-grey: #EEEEEE;
+  --social-links: #E1E1E1;
   --white: #FFFFFF;
   --white-transparent: rgba(255, 255, 255, 0.3);
-  --red: #FB565A;
-  --dark-red: #E74246;
-  --very-dark-red: #D7373B;
-  --green: #00CA74;
-  --dark-green: #00BC6C;
-  --very-dark-green: #00AA62;
-  --yellow: #EFC849;
-  --dark-yellow: #EAB534;
-  --very-dark-yellow: #E5A722;
+  --btn: #FB565A;
+  --btn-focus: #E74246;
+  --btn-active: #D7373B;
+  --btn-app: #00CA74;
+  --btn-app-focus: #00BC6C;
+  --btn-app-active: #00AA62;
+  --btn-pres: #EFC849;
+  --btn-pres-focus: #EAB534;
+  --btn-pres-active: #E5A722;
+  --product-top: #4D4D4D;
+  --product-transparent: rgba(77, 77, 77, 0.1);
   --social-offer: #444444;
   --shadow-button: rgba(0, 1, 1, 0.1);
   --shadow-text: rgba(0, 0, 0, 0.25);
@@ -54,7 +54,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-  color: var(--dark-blue);
+  color: var(--regular-text);
   background-color: var(--white);
   background-position: top center;
 }
@@ -75,46 +75,46 @@ img {
   text-align: center;
   color: var(--white);
   text-transform: uppercase;
-  background-color: var(--red);
+  background-color: var(--btn);
   border-radius: 3px;
 }
 
 .button:hover,
 .button:focus {
-  background-color: var(--dark-red);
+  background-color: var(--btn-focus);
 }
 
 .button:active {
-  background-color: var(--very-dark-red);
   color: var(--white-transparent);
+  background-color: var(--btn-active);
 }
 
 .button-app {
-  background-color: var(--green);
+  background-color: var(--btn-app);
 }
 
 .button-app:hover,
 .button-app:focus {
-  background-color: var(--dark-green);
+  background-color: var(--btn-app-focus);
 }
 
 .button-app:active {
-  background-color: var(--very-dark-green);
   color: var(--white-transparent);
+  background-color: var(--btn-app-active);
 }
 
 .button-presentation {
-  background-color: var(--yellow);
+  background-color: var(--btn-pres);
 }
 
 .button-presentation:hover,
 .button-presentation:focus {
-  background-color: var(--dark-yellow);
+  background-color: var(btn-pres-focus);
 }
 
 .button-presentation:active {
-  background-color: var(--very-dark-yellow);
   color: var(--white-transparent);
+  background-color: var(--btn-pres-active);
 }
 
 .partners__link {
@@ -144,8 +144,8 @@ img {
 
 /* header*/
 .main-header {
-  background-color: var(--basic-grey);
   margin-bottom: 70px;
+  background-color: var(--bg-grey);
   outline: 5px solid rgba(0, 255, 0, 0.7);
   outline-offset: -5px;
 }
@@ -158,8 +158,8 @@ img {
 .main-navigation {
   list-style: none;
   text-align: center;
-  color: var(--black);
   line-height: 30px;
+  color: var(--black);
   text-transform: uppercase;
   background-color: transparent;
   outline: 5px solid rgba(255, 0, 255, 0.3);
@@ -172,7 +172,7 @@ img {
 
 .main-navigation__link:hover,
 .main-navigation__link:focus {
-  color: var(--red);
+  color: var(--btn);
 }
 
 .main-navigation__link:active {
@@ -181,16 +181,16 @@ img {
 }
 
 .main-navigation__user-cart {
+  padding-left: 25px;
   background-image: url(../img/cart-icon.svg);
   background-repeat: no-repeat;
-  padding-left: 25px;
 }
 
 /* carousel */
 .carousel {
   width: 100%;
   min-height: 431px;
-  background-color: var(--basic-grey);
+  background-color: var(--bg-grey);
 }
 
 .carousel__slide1 {
@@ -210,8 +210,8 @@ img {
 
 /* index-main*/
 .works__list {
-  list-style: none;
   text-align: left;
+  list-style: none;
 }
 
 .works__list__title {
@@ -244,13 +244,13 @@ img {
 
 .product-sample {
   width: 360px;
-  border-top: 40px solid rgba(77, 77, 77, 0.12);
+  border-top: 40px solid var(--product-transparent);
   border-radius: 5px;
 }
 
 .product-sample:hover,
 .product-sample:focus {
-  border-top-color: rgba(77, 77, 77, 1);
+  border-top-color: var(--product-top);
 }
 
 .product-sample__img {
@@ -260,7 +260,7 @@ img {
 
 .product-sample__description {
   text-align: center;
-  background-color: var(--basic-grey);
+  background-color: var(--bg-grey);
   opacity: 0;
 }
 
@@ -270,9 +270,9 @@ img {
 }
 
 .product-sample__title {
-  color: var(--black);
   font-size: 18px;
   font-weight: 700;
+  color: var(--black);
   text-transform: uppercase;
 }
 
@@ -287,22 +287,22 @@ img {
   width: 50px;
   height: 50px;
   margin: 0 4px;
-  background-color: var(--basic-grey);
-  border-radius: 3px;
-  align-items: center;
+  padding: 8px 16px;
+  color: var(--black);
   text-align: center;
   text-transform: uppercase;
-  color: var(--black);
-  padding: 8px 16px;
+  background-color: var(--bg-grey);
+  border-radius: 3px;
+  align-items: center;
 }
 
 .pagination-button:hover {
-  background-color: var(--dark-grey);
+  background-color: var(--pagination-hover);
 }
 
 .pagination-button:active {
-  background-color: var(--very-dark-grey);
   color: rgba(var(--black), 0.3);
+  background-color: var(--pagination-active);
 }
 
 /*footer*/
@@ -313,28 +313,28 @@ img {
 }
 
 .social-links__item {
-  padding: 0;
   margin: 0;
+  padding: 0;
   width: 81px;
   height: 81px;
-  list-style: none;
+  background-color: var(--social-links);
   border-radius: 50%;
-  background-color: var(--light-grey);
+  list-style: none;
 }
 
 .social-links__item:focus,
 .social-links__item:hover {
-  background-color: var(--dark-red);
+  background-color: var(--btn-focus);
 }
 
 .social-links__item:active {
-  background-color: var(--very-dark-red);
+  background-color: var(--btn-active);
   box-shadow: inset 0px 3px 0px var(--shadow-button);
 }
 
 .social-links__link {
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .social-links__link:active {
@@ -354,15 +354,15 @@ img {
 }
 
 .social__offer-title {
-  color: var(--black);
   font-size: 36px;
-  font-weight: 700;
   line-height: 36px;
+  font-weight: 700;
+  color: var(--black);
 }
 
 .social__offer-text {
-  color: var(--social-offer);
   font-size: 16px;
-  font-weight: 400;
   line-height: 22px;
+  font-weight: 400;
+  color: var(--social-offer);
 }

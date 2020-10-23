@@ -25,11 +25,14 @@
     <h1 class="visually-hidden">NЁRDS DESIGN STUDIO</h1>
     <!--здесь будет карусель-->
     <div class="carousel container">
+      <div class="carousel__control">
+
+      </div>
       <!--Слайд 1-->
       <div class="carousel__slide carousel__slide-1">
         <div class="carousel__slide-content">
           <h2 class="carousel__slide-title">Долго, дорого, скрупулезно.</h2>
-          <p class="carousel__slide-text">Математически выверенный дизайн<br> для&nbspвашего сайта или мобильного приложения.</p>
+          <p class="carousel__slide-text">Математически выверенный дизайн<br> для&nbsp;вашего сайта или мобильного приложения.</p>
           <a class="button button--carousel" href="#">Узнать больше</a>
         </div>
       </div>
@@ -37,7 +40,7 @@
       <div class="carousel__slide carousel__slide-2 visually-hidden">
         <div class="carousel__slide-content">
           <h2 class="carousel__slide-title">Любим математику как никто другой</h2>
-          <p class="carousel__slide-text">Никакого креатива, только математические формулы для&nbspрасчета идеальных пропорций</p>
+          <p class="carousel__slide-text">Никакого креатива, только математические формулы для&nbsp;расчета идеальных пропорций</p>
           <a class="button button-carousel" href="#">Узнать больше</a>
         </div>
       </div>
@@ -45,7 +48,7 @@
       <div class="carousel__slide carousel__slide-3 visually-hidden">
         <div class="carousel__slide-content">
           <h2 class="carousel__slide-title">Только ночь, только хардкор</h2>
-          <p class="carousel__slide-text">Работать днем, как все? Мы против этого. Ближе к&nbspполуночи работа только начинается.</p>
+          <p class="carousel__slide-text">Работать днем, как все? Мы против этого. Ближе к&nbsp;полуночи работа только начинается.</p>
           <a class="button button-carousel" href="#">Узнать больше</a>
         </div>
       </div>
@@ -60,19 +63,19 @@
         <li class="works__list-item works__list-item--web">
           <img class="works__list-img" src="img/illustration-1.jpg" width="300" height="146" alt="Веб-сайт">
           <h3 class="works__list-title">Веб-сайты</h3>
-          <p class="works__list-text">Мир никогда не&nbspбудет прежним после того как увидит ваш сайт!</p>
+          <p class="works__list-text">Мир никогда не&nbsp;будет прежним после того как увидит ваш сайт!</p>
           <a class="button button--web" href="#">Заказать</a>
         </li>
         <li class="works__list-item works__list-item--app">
           <img class="works__list-img" src="img/illustration-2.jpg" width="300" height="146" alt="Приложения на смартфонах">
           <h3 class="works__list-title">Приложения</h3>
-          <p class="works__list-text">Покорите топ-10 приложений в&nbspAppStore и Google Play</p>
+          <p class="works__list-text">Покорите топ-10 приложений в&nbsp;AppStore и Google Play</p>
           <a class="button button--app" href="#">Заказать</a>
         </li>
         <li class="works__list-item works__list-item--presentation">
           <img class="works__list-img" src="img/illustration-3.jpg" width="300" height="146" alt="Презентация">
           <h3 class="works__list-title">Презентации</h3>
-          <p class="works__list-text">Вы даже не&nbspподозреваете, насколько вы изумительны!</p>
+          <p class="works__list-text">Вы даже не&nbsp;подозреваете, насколько вы изумительны!</p>
           <a class="button button--presentation" href="#">Заказать</a>
         </li>
       </ul>
@@ -96,18 +99,15 @@
         <p class="features__title">С 2004 года любим точность во всем:</p>
         <ul class="features__list">
           <li class="features__list__item">
-            <p class="features__list__grade">146<sup>%</%sup>
-            </p>
+            <p class="features__list__grade">146<sup>%</sup></p>
             <p class="features__text">Уровень самоотдачи</p>
           </li>
           <li class="features__list__item">
-            <p class="features__list__grade">100<sup>%</%sup>
-            </p>
+            <p class="features__list__grade">100<sup>%</sup></p>
             <p class="features__text">Соблюдение сроков</p>
           </li>
           <li class="features__list__item">
-            <p class="features__list__grade">50<sup>%</%sup>
-            </p>
+            <p class="features__list__grade">50<sup>%</sup></p>
             <p class="features__text">Минимальная предоплата</p>
           </li>
         </ul>
@@ -171,12 +171,15 @@
     </section>
   </footer>
 
-  <section class="feedback visually-hidden">
+  <section class="feedback">
     <h2 class="feedback__title">Напишите нам</h2>
-    <label class="feedback__label">Ваше имя:<input class="feedback__text" type="text" name="name" placeholder="Имя Фамилия" required></label>
-    <label class="feedback__label">Ваш e-mail:<input class="feedback__text" type="email" name="email" placeholder="email@example.com" required></label>
-    <label class="feedback__label">Текст письма:<textarea class="feedback__text feedback__textarea" name="message" placeholder="В свободной форме"></textarea></label>
-    <button class="button button--feedback" type="submit">Отправить</button><button class="feedback__close" aria-label="Закрыть" type="button"></button>
+    <div class="feedback__wrapper">
+      <label class="feedback__label">Ваше имя:<input class="feedback__text" type="text" name="name" placeholder="Имя Фамилия" required></label>
+      <label class="feedback__label">Ваш e-mail:<input class="feedback__text" type="email" name="email" placeholder="email@example.com" required></label>
+      <label class="feedback__label">Текст письма:<textarea class="feedback__text feedback__textarea" name="message" placeholder="В свободной форме"></textarea></label>
+      <button class="button button--feedback" type="submit">Отправить</button>
+    </div>
+    <button class="feedback__close" aria-label="Закрыть" type="button"></button>
   </section>
 
 </body>

@@ -91,7 +91,7 @@ img {
 }
 
 .page-body__title-wrapper {
-  padding-top: 72px;
+  padding-top: 78px;
   padding-bottom: 108px;
 }
 
@@ -269,7 +269,7 @@ img {
   position: absolute;
   content: "";
   left: 0;
-  bottom: -13px;
+  bottom: -20px;
   width: 100%;
   border-bottom: 2px solid var(--btn);
 }
@@ -466,7 +466,7 @@ img {
 
 .features__text {
   font-size: 18px;
-  font-weight: 400px;
+  font-weight: 400;
   line-height: 18px;
 }
 
@@ -846,28 +846,36 @@ img {
 }
 
 .feedback {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 70px 100px 85px;
-  width: 761px;
-  height: 436px;
+  position: relative;
+  width: 960px;
+  height: 590px;
   background-color: var(--white);
   box-shadow: 0 20px 40px var(--shadow-feedback);
 }
 
+.feedback__wrapper {
+  width: 760px;
+  height: 353px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
 .feedback__title {
-  width: 100%;
-  margin-bottom: 21px;
+  margin: 0;
+  margin-bottom: 37px;
+  padding-top: 65px;
+  padding-left: 100px;
   font-size: 45px;
   font-weight: 700;
   line-height: 53px;
 }
 
 .feedback__label {
-  margin: 16px 0;
-  height: 50px;
+  margin-bottom: 35px;
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
@@ -876,26 +884,46 @@ img {
 .feedback__text {
   display: block;
   padding: 16px;
-  width: 340px;
-  margin: auto;
+  margin-top: 5px;
+  width: 326px;
   border: 2px solid var(--border-feedback);
   border-radius: 3px;
 }
 
 .feedback__textarea {
   display: block;
-  width: 727px;
+  width: 728px;
   padding: 16px;
-  margin-bottom: 1px;
-  min-height: 118px;
+  min-height: 78px;
   border: 2px solid var(--border-feedback);
   border-radius: 3px;
 }
 
 .button--feedback {
+  width: 260px;
   display: block;
   align-self: flex-end;
-  margin-top: 47px;
+  border: 0;
+}
+
+.feedback__close {
+  position: absolute;
+  top: 80px;
+  right: 90px;
+  width: 21px;
+  height: 21px;
+  opacity: 0.3;
+  border: 0;
+  background-color: transparent;
+  background-image: url(../img/close-cross.svg);
+}
+
+.feedback__close:hover {
+  opacity: 1;
+}
+
+.feedback__close:active {
+  opacity: 0.1;
 }
 
 /* outline */

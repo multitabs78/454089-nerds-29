@@ -20,9 +20,7 @@
         <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Магазин</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
       </ul>
-      <div class="main-nav__user-nav">
-        <a class="main-nav__user-cart main-nav__link" href="#">Корзина</a>
-      </div>
+      <a class="main-nav__user-cart main-nav__link" href="#">Корзина</a>
     </nav>
     <h1 class="visually-hidden">NЁRDS DESIGN STUDIO</h1>
     <!--здесь будет карусель-->
@@ -32,7 +30,7 @@
         <div class="carousel__slide-content">
           <h2 class="carousel__slide-title">Долго, дорого, скрупулезно.</h2>
           <p class="carousel__slide-text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-          <a class="button button-carousel" href="#">Узнать больше</a>
+          <a class="button button--carousel" href="#">Узнать больше</a>
         </div>
       </div>
       <!--Слайд 2-->
@@ -115,10 +113,13 @@
 
     <section class="partners">
       <h2 class="visually-hidden">Ссылки на партнеров</h2>
-      <a class="partners__link" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/html-academy-logo.png" alt="Логотип HTML academy"></a>
-      <a class="partners__link" href="#"><img src="img/borodinski-logo.png" alt="Логотип барбершоп Бородинский"></a>
-      <a class="partners__link" href="#"><img src="img/pink-app-logo.png" alt="Логотип Pink"></a>
-      <a class="partners__link" href="#"><img src="img/mishka-logo.png" alt="Логотип Mishka"></a>
+      <ul class="partners__list">
+        <li class="partners__list-item"><a class="partners__link" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/html-academy-logo.png" width="199" height="68" alt="Логотип HTML academy"></a></li>
+        <li class="partners__list-item"><a class="partners__link" href="#"><img class="partners__img" src="img/borodinski-logo.png" width="209" height="90" alt="Логотип барбершоп Бородинский"></a></li>
+        <li class="partners__list-item"><a class="partners__link" href="#"><img src="img/pink-app-logo.png" width="185" height="52" alt="Логотип Pink"></a></li>
+        <li class="partners__list-item"><a class="partners__link" href="#"><img src="img/mishka-logo.png" width="173" height="84" alt="Логотип Mishka"></a>
+          <li>
+      </ul>
     </section>
   </main>
 
@@ -159,13 +160,21 @@
             </svg></a></li>
 
       </ul>
-      <div class="social__offer">
+      <section class="social__offer">
+        <h2 class="visually-hidden">Скидки</h2>
         <p class="social__offer-title">Давайте дружить, это выгодно!</p>
         <p class="social__offer-text">Скидка 10% для друзей из социальных сетей.</p>
-      </div>
+      </section>
     </section>
   </footer>
 
+  <section class="feedback visually-hidden">
+    <h2 class="feedback__title">Напишите нам</h2>
+    <label class="feedback__label">Ваше имя:<input class="feedback__text" type="text" name="name" placeholder="Имя Фамилия" required></label>
+    <label class="feedback__label">Ваш e-mail:<input class="feedback__text" type="email" name="email" placeholder="email@example.com" required></label>
+    <label class="feedback__label">Текст письма:<textarea class="feedback__text feedback__textarea" name="message" placeholder="В свободной форме"></textarea></label>
+    <button class="button button--feedback" type="submit">Отправить</button><button class="feedback__close" aria-label="Закрыть" type="button"></button>
+  </section>
 
 </body>
 

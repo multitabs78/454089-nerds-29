@@ -20,9 +20,7 @@
           <li class="main-nav__item"><a class="main-nav__link  main-nav__link--current" href="catalog.html">Магазин</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
         </ul>
-        <div class="main-nav__user-nav">
-          <a class="main-nav__link main-nav__user-cart" href="#">Корзина</a>
-        </div>
+        <a class="main-nav__link main-nav__user-cart" href="#">Корзина</a>
       </nav>
       <div class="page-body__title-wrapper">
         <h1 class="page-body__title">Магазин готовых шаблонов</h1>
@@ -42,18 +40,18 @@
           <fieldset class="form-filters__grid-type form-filters__fieldset">
             <legend class="form-filters__legend">Сетка:</legend>
             <p>
-              <label>
-                <input type="radio" name="GridType" checked value="adaptive">Адаптивная
+              <label class="form-filters__label form-filters__label-radio">
+                <input class="form-filters__radio" type="radio" name="GridType" checked value="adaptive">Адаптивная
               </label>
             </p>
             <p>
-              <label>
-                <input type="radio" name="GridType" value="fixed">Фиксированная
+              <label class="form-filters__label form-filters__label-radio">
+                <input class="form-filters__radio" type="radio" name="GridType" value="fixed">Фиксированная
               </label>
             </p>
             <p>
-              <label>
-                <input type="radio" name="GridType" value="rubber">Резиновая
+              <label class="form-filters__label form-filters__label-radio">
+                <input class="form-filters__radio" type="radio" name="GridType" value="rubber">Резиновая
               </label>
             </p>
           </fieldset>
@@ -61,28 +59,28 @@
           <fieldset class="form-filters__features form-filters__fieldset">
             <legend class="form-filters__legend">Особенности:</legend>
             <p>
-              <label>
-                <input type="checkbox" name="Features" value="slider" checked>Слайдер
+              <label class="form-filters__label form-filters__label-checkbox">
+                <input class="form-filters__checkbox" type="checkbox" name="Features" value="slider" checked>Слайдер
               </label>
             </p>
             <p>
-              <label>
-                <input type="checkbox" name="Features" value="feature-block">Блок преимуществ
+              <label class="form-filters__label form-filters__label-checkbox">
+                <input class="form-filters__checkbox" type="checkbox" name="Features" value="feature-block">Блок преимуществ
               </label>
             </p>
             <p>
-              <label>
-                <input type="checkbox" name="Features" value="news" checked> Новости
+              <label class="form-filters__label form-filters__label-checkbox">
+                <input class="form-filters__checkbox" type="checkbox" name="Features" value="news" checked> Новости
               </label>
             </p>
             <p>
-              <label>
-                <input type="checkbox" name="Features" value="gallery"> Галерея
+              <label class="form-filters__label form-filters__label-checkbox">
+                <input class="form-filters__checkbox" type="checkbox" name="Features" value="gallery"> Галерея
               </label>
             </p>
             <p>
-              <label>
-                <input type="checkbox" name="Features" value="cart"> Корзина
+              <label class="form-filters__label form-filters__label-checkbox">
+                <input class="form-filters__checkbox" type="checkbox" name="Features" value="cart"> Корзина
               </label>
             </p>
           </fieldset>
@@ -177,15 +175,15 @@
         <div class="contacts__map">
           <!-- map -->
         </div>
-        <div class="contacts__wrapper container">
-          <p class="contacts__title">Nёrds design studio</p>
-          <p class="contacts__text">191186, Санкт-Петербург, <br>
-            ул. Б. Конюшенная, д. 19/8<br>
-            тел. <a class="contacts__phone" href="tel:+78122757575">+7 (812) 275-75-75</a><br>
+        <div class="container">
+          <div class="contacts__wrapper">
+            <p class="contacts__title">Nёrds design studio</p>
+            <p class="contacts__text">191186, Санкт-Петербург, <br>
+              ул. Б. Конюшенная, д. 19/8</p>
+            <p class="contacts__text">тел. <a class="contacts__phone" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
             <a class="button contacts__button" href="#">Напишите нам</a>
-          </p>
+          </div>
         </div>
-
       </section>
 
       <section class="social container">
@@ -214,7 +212,6 @@
         </div>
       </section>
     </footer>
-
 
   </body>
 

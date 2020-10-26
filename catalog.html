@@ -31,58 +31,58 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтры</h2>
 
-        <form class="form-filters">
+        <form class="form-filters" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="form-filters__price form-filters__fieldset">
             <legend class="form-filters__legend">Стоимость</legend>
-            <p> <input type="range" min="0" max="15000" value="9900" class="slider" name="Price1"></p>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  от <input class="range-filter-price" type="number" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                  до <input class="range-filter-price" type="number" name="max-price" value="15000">
+                </label>
+              </div>
+            </div>
           </fieldset>
 
           <fieldset class="form-filters__grid-type form-filters__fieldset">
             <legend class="form-filters__legend">Сетка:</legend>
-            <p>
-              <label class="form-filters__label form-filters__label-radio">
-                <input class="form-filters__radio" type="radio" name="GridType" checked value="adaptive">Адаптивная
-              </label>
-            </p>
-            <p>
-              <label class="form-filters__label form-filters__label-radio">
-                <input class="form-filters__radio" type="radio" name="GridType" value="fixed">Фиксированная
-              </label>
-            </p>
-            <p>
-              <label class="form-filters__label form-filters__label-radio">
-                <input class="form-filters__radio" type="radio" name="GridType" value="rubber">Резиновая
-              </label>
-            </p>
+            <label class="form-filters__label form-filters__label-radio">
+              <input class="form-filters__radio visually-hidden" type="radio" name="GridType" checked value="adaptive"><span class="form-filters__text">Адаптивная</span>
+            </label>
+            <label class="form-filters__label form-filters__label-radio">
+              <input class="form-filters__radio visually-hidden" type="radio" name="GridType" value="fixed"><span class="form-filters__text">Фиксированная</span>
+            </label>
+            <label class="form-filters__label form-filters__label-radio">
+              <input class="form-filters__radio visually-hidden" type="radio" name="GridType" value="rubber"><span class="form-filters__text">Резиновая</span>
+            </label>
           </fieldset>
 
           <fieldset class="form-filters__features form-filters__fieldset">
             <legend class="form-filters__legend">Особенности:</legend>
-            <p>
-              <label class="form-filters__label form-filters__label-checkbox">
-                <input class="form-filters__checkbox" type="checkbox" name="Features" value="slider" checked>Слайдер
-              </label>
-            </p>
-            <p>
-              <label class="form-filters__label form-filters__label-checkbox">
-                <input class="form-filters__checkbox" type="checkbox" name="Features" value="feature-block">Блок преимуществ
-              </label>
-            </p>
-            <p>
-              <label class="form-filters__label form-filters__label-checkbox">
-                <input class="form-filters__checkbox" type="checkbox" name="Features" value="news" checked> Новости
-              </label>
-            </p>
-            <p>
-              <label class="form-filters__label form-filters__label-checkbox">
-                <input class="form-filters__checkbox" type="checkbox" name="Features" value="gallery"> Галерея
-              </label>
-            </p>
-            <p>
-              <label class="form-filters__label form-filters__label-checkbox">
-                <input class="form-filters__checkbox" type="checkbox" name="Features" value="cart"> Корзина
-              </label>
-            </p>
+            <label class="form-filters__label form-filters__label-checkbox">
+              <input class="form-filters__checkbox visually-hidden" type="checkbox" name="Features" value="slider" checked><span class="form-filters__text">Слайдер</span>
+            </label>
+            <label class="form-filters__label form-filters__label-checkbox">
+              <input class="form-filters__checkbox visually-hidden" type="checkbox" name="Features" value="feature-block"><span class="form-filters__text">Блок преимуществ</span>
+            </label>
+            <label class="form-filters__label form-filters__label-checkbox">
+              <input class="form-filters__checkbox visually-hidden" type="checkbox" name="Features" value="news" checked><span class="form-filters__text">Новости</span>
+            </label>
+            <label class="form-filters__label form-filters__label-checkbox">
+              <input class="form-filters__checkbox visually-hidden" type="checkbox" name="Features" value="gallery"><span class="form-filters__text">Галерея</span>
+            </label>
+            <label class="form-filters__label form-filters__label-checkbox">
+              <input class="form-filters__checkbox visually-hidden" type="checkbox" name="Features" value="cart"><span class="form-filters__text">Корзина</span>
+            </label>
           </fieldset>
 
           <div>
@@ -97,18 +97,20 @@
           <p class="catalog__title">Сортировать:</p>
           <div class="catalog__sort-wrapper">
             <ul class="catalog__sort-list">
-              <li class="catalog__sort-item">По цене</li>
+              <li class="catalog__sort-item catalog__sort-item--active">По цене</li>
               <li class="catalog__sort-item">По типу</li>
               <li class="catalog__sort-item">По названию</li>
             </ul>
+            <button class="catalog__sort-button catalog__sort-button--decrease catalog__sort-button--active" type="button" name="atalog__sort-button-decrease"></button>
+            <button class="catalog__sort-button catalog__sort-button--increase" type="button" name="catalog__sort-button-increase"></button>
           </div>
         </div>
         <ul class="catalog__list">
           <li class="catalog__list-item product-sample">
             <img class="product-sample__img" src="img/img-sedona.jpg" width="359" height="578" alt="Sedona">
             <div class="product-sample__description">
-              <h3 class="product-sample__title">Sedona</h3>
-              <p class="product-sample__text">Информационный сайт для туристов</p>
+              <h3 class="product-sample__title"><a class="product-sample__title--link" href="product.html">Sedona</a></h3>
+              <p class="product-sample__text">Информационный сайт для&nbsp;туристов</p>
               <a class="button product-sample__button" href="#">9 900 &#8381;</a>
             </div>
           </li>
@@ -116,8 +118,8 @@
           <li class="catalog__list-item product-sample">
             <img class="product-sample__img" src="img/img-pink.jpg" width="358" height="578" alt="Pink App">
             <div class="product-sample__description">
-              <h3 class="product-sample__title">Pink App</h3>
-              <p class="product-sample__text">Продуктовый лендинг приложения для iOS и Android</p>
+              <h3 class="product-sample__title"><a class="product-sample__title--link" href="product.html">Pink App</a></h3>
+              <p class="product-sample__text">Продуктовый лендинг приложения для&nbsp;iOS и Android</p>
               <a class="button product-sample__button" href="#">9 900 &#8381;</a>
             </div>
           </li>
@@ -125,8 +127,8 @@
           <li class="catalog__list-item product-sample">
             <img class="product-sample__img" src="img/img-barbershop.jpg" width="359" height="578" alt="Barbershop BORODINSKI">
             <div class="product-sample__description">
-              <h3 class="product-sample__title">Barbershop BORODINSKI</h3>
-              <p class="product-sample__text">Сайт салона красоты. Для мужчин, да.</p>
+              <h3 class="product-sample__title"><a class="product-sample__title--link" href="product.html">Barbershop BORODINSKI</a></h3>
+              <p class="product-sample__text">Сайт салона красоты. Для&nbsp;мужчин,&nbsp;да.</p>
               <a class="button product-sample__button" href="#">9 900 &#8381;</a>
             </div>
           </li>
@@ -134,7 +136,7 @@
           <li class="catalog__list-item product-sample">
             <img class="product-sample__img" src="img/img-mishka.jpg" width="359" height="578" alt="MISHKA">
             <div class="product-sample__description">
-              <h3 class="product-sample__title">MISHKA</h3>
+              <h3 class="product-sample__title"><a class="product-sample__title--link" href="product.html">MISHKA</a></h3>
               <p class="product-sample__text">Интернет-магазин вязаных игрушек</p>
               <a class="button product-sample__button" href="#">9 900 &#8381;</a>
             </div>
@@ -143,7 +145,7 @@
           <li class="catalog__list-item product-sample">
             <img class="product-sample__img" src="img/img-aplus.jpg" width="359" height="578" alt="A Plus">
             <div class="product-sample__description">
-              <h3 class="product-sample__title">A Plus</h3>
+              <h3 class="product-sample__title"><a class="product-sample__title--link" href="product.html">A Plus</a></h3>
               <p class="product-sample__text">Лендинг курсов повышения квалификации</p>
               <a class="button product-sample__button" href="#">9 900 &#8381;</a>
             </div>
@@ -152,7 +154,7 @@
           <li class="catalog__list-item product-sample">
             <img class="product-sample__img" src="img/img-kvast.jpg" width="362" height="580" alt="КВАСТ">
             <div class="product-sample__description">
-              <h3 class="product-sample__title">КВАСТ</h3>
+              <h3 class="product-sample__title"><a class="product-sample__title--link" href="product.html">КВАСТ</a></h3>
               <p class="product-sample__text">Промо-сайт производителя крафтового кваса</p>
               <a class="button product-sample__button" href="#">9 900 &#8381;</a>
             </div>
@@ -160,7 +162,7 @@
         </ul>
 
         <div class="pagination">
-          <a class="pagination-button pagination-button__current">1</a>
+          <a class="pagination-button pagination-button--current">1</a>
           <a class="pagination-button" href="#">2</a>
           <a class="pagination-button" href="#">3</a>
           <a class="pagination-button pagination-button__next" href="#">Следующая</a>

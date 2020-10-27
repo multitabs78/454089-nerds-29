@@ -91,6 +91,7 @@ img {
 .page-body {
   min-height: 100%;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
@@ -260,6 +261,7 @@ img {
 
 .main-header__nav {
   display: grid;
+  grid-template-columns: -webkit-min-content 1fr -webkit-min-content;
   grid-template-columns: min-content 1fr min-content;
   width: 1160px;
   margin: 0 auto;
@@ -411,6 +413,7 @@ img {
   padding: 0 0 90px 0;
   display: grid;
   grid-template-columns: repeat(3, 300px);
+  -moz-column-gap: 100px;
   column-gap: 100px;
   justify-content: start;
   list-style: none;
@@ -599,7 +602,7 @@ img {
 .catalog__title-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 53px;
+  margin-bottom: 60px;
 }
 
 .catalog__title {
@@ -674,7 +677,7 @@ img {
   justify-content: space-between;
   margin: 0;
   padding-left: 0;
-  padding-bottom: 16px;
+  padding-bottom: 25px;
   list-style: none;
 }
 
@@ -733,7 +736,7 @@ img {
 
 .product-sample__title {
   margin: 0px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .product-sample__text {
@@ -757,20 +760,20 @@ img {
 
 .form-filters__fieldset {
   margin: 0;
+  margin-bottom: 32px;
   padding: 0;
   border: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
 }
 
 .form-filters__price {
-  margin-bottom: 48px;
+  margin-bottom: 53px;
 }
 
 .form-filters__grid-type {
   min-height: 160px;
-  margin-bottom: 32px;
 }
 
 .form-filters__features {
@@ -778,6 +781,7 @@ img {
 }
 
 .form-filters__legend {
+  margin-bottom: 13px;
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
@@ -786,7 +790,7 @@ img {
 
 .range-filter {
   width: 260px;
-  margin-top: 48px;
+  margin-top: 30px;
 }
 
 .range-controls {
@@ -843,7 +847,6 @@ img {
   padding: 10px;
   margin-left: 10px;
   text-align: center;
-  /* color: #283136; */
   border: none;
   border-radius: 5px;
   background-color: var(--bg-grey);
@@ -856,6 +859,7 @@ img {
 
 .form-filters__label {
   position: relative;
+  margin-bottom: 20px;
   padding-left: 20px;
   line-height: 20px;
   /* cursor: pointer; */
@@ -870,7 +874,7 @@ img {
   position: absolute;
   content: "";
   left: -10px;
-  top: -4px;
+  top: 0;
   background-repeat: no-repeat;
   opacity: 0.3;
 }
@@ -880,7 +884,7 @@ img {
   position: absolute;
   content: "";
   left: -10px;
-  top: -4px;
+  top: 0;
   background-repeat: no-repeat;
   opacity: 0.3;
 }
@@ -917,21 +921,27 @@ img {
 }
 
 .form-filters__radio:checked+.form-filters__text::before,
-.form-filters__checkbox:checked+.form-filters__text::before {
+.form-filters__checkbox:checked+.form-filters__text::before,
+.form-filters__radio:checked:hover+.form-filters__text::before,
+.form-filters__checkbox:checked:hover+.form-filters__text::before,
+.form-filters__radio:checked:disabled+.form-filters__text::before,
+.form-filters__checkbox:checked:disabled+.form-filters__text::before,
+.form-filters__radio:disabled+.form-filters__text::after,
+.form-filters__checkbox:disabled+.form-filters__text::after {
   opacity: 0;
 }
 
 .form-filters__radio:checked:hover+.form-filters__text::after,
-.form-filters__checkbox:checked:hover+.form-filters__text::after {
-  opacity: 1;
-}
-
+.form-filters__checkbox:checked:hover+.form-filters__text::after,
 .form-filters__label:hover .form-filters__text::before,
 .form-filters__label:focus .form-filters__text::before {
   opacity: 1;
 }
 
-.form-filters__label:disabled .form-filters__text {
+.form-filters__radio:disabled+.form-filters__text::before,
+.form-filters__checkbox:disabled+.form-filters__text::before,
+.form-filters__radio:checked:disabled+.form-filters__text::after,
+.form-filters__checkbox:checked:disabled+.form-filters__text::after {
   opacity: 0.1;
 }
 
@@ -945,6 +955,7 @@ img {
 .main-footer {
   padding-bottom: 70px;
   display: grid;
+  grid-template-rows: 2fr -webkit-min-content;
   grid-template-rows: 2fr min-content;
 }
 
@@ -972,6 +983,7 @@ img {
 
 .contacts__title {
   margin: 0;
+  margin-bottom: 10px;
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;

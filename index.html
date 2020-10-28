@@ -25,11 +25,13 @@
     <h1 class="visually-hidden">NЁRDS DESIGN STUDIO</h1>
     <!--здесь будет карусель-->
     <div class="carousel container">
-      <div class="carousel__control">
-
+      <div class="carousel__controls">
+        <button class="carousel__controls-button carousel__controls-button--current" type="button" name="button"></button>
+        <button class="carousel__controls-button" type="button" name="button"></button>
+        <button class="carousel__controls-button" type="button" name="button"></button>
       </div>
       <!--Слайд 1-->
-      <div class="carousel__slide carousel__slide-1">
+      <div class="carousel__slide carousel__slide-1 visually-hidden">
         <div class="carousel__slide-content">
           <h2 class="carousel__slide-title">Долго, дорого, скрупулезно.</h2>
           <p class="carousel__slide-text">Математически выверенный дизайн<br> для&nbsp;вашего сайта или мобильного приложения.</p>
@@ -37,7 +39,7 @@
         </div>
       </div>
       <!--Слайд 2-->
-      <div class="carousel__slide carousel__slide-2 visually-hidden">
+      <div class="carousel__slide carousel__slide-2">
         <div class="carousel__slide-content">
           <h2 class="carousel__slide-title">Любим математику как никто другой</h2>
           <p class="carousel__slide-text">Никакого креатива, только математические формулы для&nbsp;расчета идеальных пропорций</p>
@@ -120,8 +122,7 @@
         <li class="partners__list-item"><a class="partners__link" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/html-academy-logo.png" width="199" height="68" alt="Логотип HTML academy"></a></li>
         <li class="partners__list-item"><a class="partners__link" href="#"><img class="partners__img" src="img/borodinski-logo.png" width="209" height="90" alt="Логотип барбершоп Бородинский"></a></li>
         <li class="partners__list-item"><a class="partners__link" href="#"><img src="img/pink-app-logo.png" width="185" height="52" alt="Логотип Pink"></a></li>
-        <li class="partners__list-item"><a class="partners__link" href="#"><img src="img/mishka-logo.png" width="173" height="84" alt="Логотип Mishka"></a>
-        <li>
+        <li class="partners__list-item"><a class="partners__link" href="#"><img src="img/mishka-logo.png" width="173" height="84" alt="Логотип Mishka"></a></li>
       </ul>
     </section>
   </main>
@@ -171,16 +172,23 @@
     </section>
   </footer>
 
+
+  <!-- <div class="feedback__overlay overlay"> -->
   <section class="feedback">
-    <h2 class="feedback__title">Напишите нам</h2>
     <div class="feedback__wrapper">
-      <label class="feedback__label">Ваше имя:<input class="feedback__text" type="text" name="name" placeholder="Имя Фамилия" required></label>
-      <label class="feedback__label">Ваш e-mail:<input class="feedback__text" type="email" name="email" placeholder="email@example.com" required></label>
-      <label class="feedback__label">Текст письма:<textarea class="feedback__text feedback__textarea" name="message" placeholder="В свободной форме"></textarea></label>
-      <button class="button button--feedback" type="submit">Отправить</button>
+      <h2 class="feedback__title">Напишите нам</h2>
+      <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="feedback__label">Ваше имя:<input class="feedback__text" type="text" name="name" placeholder="Имя Фамилия" required></label>
+        <label class="feedback__label">Ваш e-mail:<input class="feedback__text" type="email" name="email" placeholder="email@example.com" required></label>
+        <label class="feedback__label">Текст письма:<textarea class="feedback__text feedback__textarea" name="message" placeholder="В свободной форме"></textarea></label>
+        <button class="button button--feedback" type="submit">Отправить</button>
+      </form>
     </div>
     <button class="feedback__close" aria-label="Закрыть" type="button"></button>
   </section>
+  <!-- </div> -->
+
+  <script src="js/popup.js"></script>
 
 </body>
 

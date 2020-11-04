@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-minimize.css" rel="stylesheet">
   </head>
 
   <body class="page-body">
@@ -17,7 +17,7 @@
         <ul class="main-nav">
           <li class="main-nav__item"><a class="main-nav__link" href="#">Студия</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="#">Клиенты</a></li>
-          <li class="main-nav__item"><a class="main-nav__link  main-nav__link--current" href="catalog.html">Магазин</a></li>
+          <li class="main-nav__item"><a class="main-nav__link  main-nav__link--current">Магазин</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
         </ul>
         <a class="main-nav__link main-nav__user-cart" href="#">Корзина</a>
@@ -31,7 +31,7 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтры</h2>
 
-        <form class="form-filters" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="form-filters" action="https://echo.htmlacademy.ru/" method="get" target="_blank">
           <fieldset class="form-filters__price form-filters__fieldset">
             <legend class="form-filters__legend">Стоимость:</legend>
             <div class="range-filter">
@@ -56,7 +56,7 @@
           <fieldset class="form-filters__grid-type form-filters__fieldset">
             <legend class="form-filters__legend">Сетка:</legend>
             <label class="form-filters__label form-filters__label-radio">
-              <input class="form-filters__radio visually-hidden" type="radio" name="GridType" checked value="adaptive"><span class="form-filters__text">Адаптивная</span>
+              <input class="form-filters__radio visually-hidden" type="radio" name="GridType" value="adaptive" checked><span class="form-filters__text">Адаптивная</span>
             </label>
             <label class="form-filters__label form-filters__label-radio">
               <input class="form-filters__radio visually-hidden" type="radio" name="GridType" value="fixed"><span class="form-filters__text">Фиксированная</span>
@@ -101,12 +101,12 @@
               <li class="catalog__sort-item">По типу</li>
               <li class="catalog__sort-item">По названию</li>
             </ul>
-            <button class="catalog__sort-button catalog__sort-button--decrease catalog__sort-button--active" type="button" name="atalog__sort-button-decrease"></button>
-            <button class="catalog__sort-button catalog__sort-button--increase" type="button" name="catalog__sort-button-increase"></button>
+            <button class="catalog__sort-button catalog__sort-button--decrease catalog__sort-button--active" type="button" name="atalog__sort-button-decrease"><s class="visually-hidden">Сортировать по убыванию</s></button>
+            <button class="catalog__sort-button catalog__sort-button--increase" type="button" name="catalog__sort-button-increase"><span class="visually-hidden">Сортировать по возрастанию</span></button>
           </div>
         </div>
         <ul class="catalog__list">
-          <li class="catalog__list-item product-sample">
+          <li class="catalog__list-item product-sample" tabindex="0">
             <img class="product-sample__img" src="img/img-sedona.jpg" width="359" height="578" alt="Sedona">
             <div class="product-sample__description">
               <h3 class="product-sample__title"><a class="product-sample__title--link" href="product.html">Sedona</a></h3>
@@ -115,7 +115,7 @@
             </div>
           </li>
 
-          <li class="catalog__list-item product-sample">
+          <li class="catalog__list-item product-sample" tabindex="0">
             <img class="product-sample__img" src="img/img-pink.jpg" width="358" height="578" alt="Pink App">
             <div class="product-sample__description">
               <h3 class="product-sample__title"><a class="product-sample__title--link" href="product.html">Pink App</a></h3>
@@ -124,7 +124,7 @@
             </div>
           </li>
 
-          <li class="catalog__list-item product-sample">
+          <li class="catalog__list-item product-sample" tabindex="0">
             <img class="product-sample__img" src="img/img-barbershop.jpg" width="359" height="578" alt="Barbershop BORODINSKI">
             <div class="product-sample__description">
               <h3 class="product-sample__title"><a class="product-sample__title--link" href="product.html">Barbershop BORODINSKI</a></h3>
@@ -133,7 +133,7 @@
             </div>
           </li>
 
-          <li class="catalog__list-item product-sample">
+          <li class="catalog__list-item product-sample" tabindex="0">
             <img class="product-sample__img" src="img/img-mishka.jpg" width="359" height="578" alt="MISHKA">
             <div class="product-sample__description">
               <h3 class="product-sample__title"><a class="product-sample__title--link" href="product.html">MISHKA</a></h3>
@@ -142,7 +142,7 @@
             </div>
           </li>
 
-          <li class="catalog__list-item product-sample">
+          <li class="catalog__list-item product-sample" tabindex="0">
             <img class="product-sample__img" src="img/img-aplus.jpg" width="359" height="578" alt="A Plus">
             <div class="product-sample__description">
               <h3 class="product-sample__title"><a class="product-sample__title--link" href="product.html">A Plus</a></h3>
@@ -151,7 +151,7 @@
             </div>
           </li>
 
-          <li class="catalog__list-item product-sample">
+          <li class="catalog__list-item product-sample" tabindex="0">
             <img class="product-sample__img" src="img/img-kvast.jpg" width="362" height="580" alt="КВАСТ">
             <div class="product-sample__description">
               <h3 class="product-sample__title"><a class="product-sample__title--link" href="product.html">КВАСТ</a></h3>
@@ -174,8 +174,8 @@
     <footer class="main-footer">
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__map">
-          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1108.788942478753!2d30.32167562037188!3d59.93889471823952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1603977826635!5m2!1sru!2sru" id="map" width="100%" height="416" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+        <img class="contacts__reserve-map" src="img/map_bg.png" width="1440" height="416" alt="Местоположение нашего офиса">
+        <div class="contacts__map" id="map">
         </div>
         <div class="container">
           <div class="contacts__wrapper">
@@ -191,17 +191,18 @@
       <section class="social container">
         <h2 class="visually-hidden">Соцсети</h2>
         <ul class="social__links">
-          <li class="social__links-item"><a class="social__links-link" href="https://vk.com" aria-label="ВКонтакте"><svg class="social__links-icon" width="27" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <li class="social__links-item"><a class="social__links-link" href="https://vk.com" aria-label="ВКонтакте"><svg class="social__links-icon" width="27" height="15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path
                   d="M16.138 11.51c.956-.309 2.18 2.04 3.483 2.939.978.681 1.727.534 1.727.534l3.473-.05s1.815-.112.957-1.554c-.071-.12-.503-1.069-2.585-3.022-2.177-2.043-1.882-1.712.739-5.244 1.597-2.153 2.236-3.468 2.036-4.028-.192-.539-1.365-.399-1.365-.399L20.69.713c-.381.001-.704.119-.851.515-.003.004-.621 1.666-1.445 3.079-1.741 2.989-2.436 3.148-2.724 2.961-.661-.433-.494-1.737-.494-2.664 0-2.897.432-4.105-.846-4.417-.427-.104-.739-.172-1.828-.182-1.392-.021-2.574 0-3.244.329-.445.223-.786.712-.579.74.26.035.843.16 1.155.586.401.552.389 1.789.389 1.789s.229 3.411-.54 3.834c-.528.29-1.25-.302-2.803-3.016-.793-1.388-1.392-2.922-1.392-2.922s-.116-.285-.326-.441c-.25-.185-.6-.244-.6-.244L.848.684S.29.7.085.946c-.182.218-.015.668-.015.668s2.909 6.881 6.203 10.347c3.02 3.182 6.452 2.971 6.452 2.971h1.555s.469-.054.709-.312c.224-.24.214-.691.214-.691s-.031-2.109.935-2.419z"
                   fill="#fff" />
               </svg></a></li>
 
 
-          <li class="social__links-item"><a class="social__links-link" href="https://www.facebook.com" aria-label="Facebook"><svg class="social__links-icon" width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <li class="social__links-item"><a class="social__links-link" href="https://www.facebook.com" aria-label="Facebook"><svg class="social__links-icon" width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff" />
               </svg></a></li>
-          <li class="social__links-item"><a class="social__links-link insta-icon" href="https://www.instagram.com" aria-label="Instagram"><svg class="social__links-icon" width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <li class="social__links-item"><a class="social__links-link insta-icon" href="https://www.instagram.com" aria-label="Instagram"><svg class="social__links-icon" width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M3 0h15c1.65 0 3 1.35 3 3v15c0 1.65-1.35 3-3 3H3c-1.65 0-3-1.35-3-3V3c0-1.65 1.35-3 3-3zm11 10.5C14 8.57 12.43 7 10.5 7S7 8.57 7 10.5 8.57 14 10.5 14s3.5-1.57 3.5-3.5zM3 18V9h1.181c-.118.491-.18.995-.181 1.5a6.5 6.5 0 1013 0 6.451 6.451 0 00-.181-1.5H18v9H3zM14 7h4V3h-4v4z"
                   fill="#fff" />
@@ -215,21 +216,24 @@
       </section>
     </footer>
 
-    <section class="feedback">
-      <div class="feedback__wrapper">
-        <h2 class="feedback__title">Напишите нам</h2>
-        <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="feedback__label">Ваше имя:<input class="feedback__text" type="text" name="name" placeholder="Имя Фамилия" required></label>
-          <label class="feedback__label">Ваш email:<input class="feedback__text" type="email" name="email" placeholder="email@example.com" required></label>
-          <label class="feedback__label">Текст письма:<textarea class="feedback__text feedback__textarea" name="message" placeholder="В свободной форме"></textarea></label>
-          <button class="button button--feedback" type="submit">Отправить</button>
-        </form>
-      </div>
-      <button class="feedback__close" aria-label="Закрыть" type="button"></button>
-    </section>
+    <div class="feedback__overlay overlay">
+      <section class="feedback">
+        <div class="feedback__wrapper">
+          <h2 class="feedback__title">Напишите нам</h2>
+          <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="feedback__label">Ваше имя:<input class="feedback__text feedback__text--name" type="text" name="name" placeholder="Имя Фамилия"></label>
+            <label class="feedback__label">Ваш email:<input class="feedback__text feedback__text--email" type="email" name="email" placeholder="email@example.com"></label>
+            <label class="feedback__label">Текст письма:<textarea class="feedback__text feedback__textarea" name="message" placeholder="В свободной форме"></textarea></label>
+            <button class="button button--feedback" type="submit">Отправить</button>
+          </form>
+        </div>
+        <button class="feedback__close" aria-label="Закрыть" type="button"></button>
+      </section>
+    </div>
 
-    <script src="js/popup.js"></script>
-    <!-- <script src="js/map.js"></script> -->
+    <script src="js/popup-minimize.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=a92118a5-21e3-4a59-a547-75d981f29002"></script>
+    <script src="js/map-minimize.js"></script>
 
   </body>
 

@@ -1312,9 +1312,7 @@ img {
 .feedback__wrapper {
   width: 760px;
   min-height: 353px;
-  padding-top: 63px;
-  padding-right: 100px;
-  padding-left: 100px;
+  padding: 63px 100px 84px;
 }
 
 .feedback__title {
@@ -1365,6 +1363,7 @@ img {
   min-height: 82px;
   margin-bottom: 13px;
   padding: 16px;
+  resize: vertical;
 }
 
 .button--feedback {

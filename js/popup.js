@@ -25,12 +25,18 @@ openModal.addEventListener('click', function(evt) {
   if (nameStorage && emailStorage) {
     name.value = nameStorage;
     email.value = emailStorage;
-    textarea.focus();
-  } else if (nameStorage){
+    setTimeout(() => {
+      textarea.focus();
+    }, 800);
+  } else if (nameStorage) {
     name.value = nameStorage;
-    email.focus();
+    setTimeout(() => {
+      email.focus();
+    }, 800);
   } else {
-    name.focus();
+    setTimeout(() => {
+      name.focus();
+    }, 800);
   }
 });
 

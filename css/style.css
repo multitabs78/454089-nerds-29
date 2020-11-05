@@ -145,6 +145,7 @@ img {
   margin: 0;
   padding: 15px 40px 16px 39px;
   min-height: 19px;
+  vertical-align: middle;
   font: inherit;
   font-weight: 500;
   line-height: 18px;
@@ -364,7 +365,7 @@ img {
   outline: none
 }
 
-.carousel__controls-button:hover {
+.carousel__controls-button:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
@@ -714,6 +715,11 @@ img {
 
 .catalog__sort-button--increase {
   background-image: url(../img/icon-up-dir.svg);
+}
+
+.catalog__sort-button--active,
+.catalog__sort-item--active .catalog__sort-link {
+  cursor: default;
 }
 
 .catalog__sort-button:hover,
@@ -1282,7 +1288,7 @@ img {
   z-index: 30;
   display: block;
   position: fixed;
-  top: 0;
+  top: 50%;
   width: 960px;
   min-height: 590px;
   background-color: var(--white);
@@ -1299,7 +1305,7 @@ img {
 
 .feedback--active .feedback {
   opacity: 1;
-  transform: perspective(600px) translate(0, 25%) rotateX(0);
+  transform: perspective(600px) translate(0, -50%) rotateX(0);
   transition: all 0.8s ease 0s;
 }
 
@@ -1342,6 +1348,7 @@ img {
   border: 2px solid var(--black);
   border-radius: 3px;
   opacity: 0.2;
+  outline: none;
 }
 
 .feedback__text:hover {

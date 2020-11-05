@@ -5,12 +5,15 @@ const feedbackForm = feedbackPopup.querySelector('.feedback__form');
 const name = feedbackForm.querySelector('.feedback__text--name');
 const email = feedbackForm.querySelector('.feedback__text--email');
 const textarea = feedbackForm.querySelector('.feedback__textarea');
+let text = feedbackForm.querySelectorAll('.feedback__text');
 
 let isStorageSupport = true;
-let storage = '';
+let nameStorage = '';
+let emailStorage = '';
 
 try {
-  storage = localStorage.getItem('name');
+  nameStorage = localStorage.getItem('name');
+  emailStorage = localStorage.getItem('email');
 } catch (err) {
   isStorageSupport = false;
 }
@@ -19,8 +22,12 @@ openModal.addEventListener('click', function(evt) {
   evt.preventDefault();
   feedbackPopup.classList.add('feedback--active');
 
-  if (storage) {
-    name.value = storage;
+  if (nameStorage && emailStorage) {
+    name.value = nameStorage;
+    email.value = emailStorage;
+    textarea.focus();
+  } else if (nameStorage){
+    name.value = nameStorage;
     email.focus();
   } else {
     name.focus();
@@ -39,6 +46,8 @@ closeModal.addEventListener('click', function(evt) {
 feedbackForm.addEventListener('submit', function(evt) {
   if (!name.value) {
     evt.preventDefault();
+    feedbackPopup.classList.remove('feedback-error"');
+    openModal.offsetWidth = openModal.offsetWidth;
     name.classList.add('feedback__text--error');
     feedbackPopup.classList.add('feedback-error');
   } else {
@@ -51,6 +60,8 @@ feedbackForm.addEventListener('submit', function(evt) {
 feedbackForm.addEventListener('submit', function(evt) {
   if (!email.value) {
     evt.preventDefault();
+    feedbackPopup.classList.remove('feedback-error"');
+    openModal.offsetWidth = openModal.offsetWidth;
     email.classList.add('feedback__text--error');
     feedbackPopup.classList.add('feedback-error');
   } else {
@@ -64,6 +75,8 @@ feedbackForm.addEventListener('submit', function(evt) {
   if (textarea.value == null ||
     textarea.value.length == '') {
     evt.preventDefault();
+    feedbackPopup.classList.remove('feedback-error"');
+    openModal.offsetWidth = openModal.offsetWidth;
     textarea.classList.add('feedback__text--error');
     feedbackPopup.classList.add('feedback-error');
   }

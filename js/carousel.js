@@ -23,7 +23,7 @@ ctrlBtn2.addEventListener('click', function (evt) {
   evt.preventDefault();
   ctrlBtn2.classList.add('carousel__controls-button--active');
   ctrlBtn1.classList.remove('carousel__controls-button--active');
-  ctrlBtn3.classList.remove('carousel__controls-button--active"');
+  ctrlBtn3.classList.remove('carousel__controls-button--active');
   slideOne.classList.remove('carousel__slide--active');
   slideTwo.classList.add('carousel__slide--active');
   slideThree.classList.remove('carousel__slide--active');

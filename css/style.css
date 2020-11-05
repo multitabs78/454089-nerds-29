@@ -2,30 +2,30 @@
 /* --------------------Fonts-------------------- */
 /* ------------------------------------------------------------ */
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto Regular'), local('Roboto-Regular'),
-    url('../fonts/roboto.woff2') format('woff2'),
-    url('../fonts/roboto.woff') format('woff');
+  src: local("Roboto Regular"), local("Roboto-Regular"),
+    url("../fonts/roboto.woff2") format("woff2"),
+    url("../fonts/roboto.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: local('Roboto Medium'), local('Roboto-Medium'),
-    url('../fonts/robotomedium.woff2') format('woff2'),
-    url('../fonts/robotomedium.woff') format('woff');
+  src: local("Roboto Medium"), local('Roboto-Medium'),
+    url("../fonts/robotomedium.woff2") format("woff2"),
+    url("../fonts/robotomedium.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'),
-    url('../fonts/robotobold.woff2') format('woff2'),
-    url('../fonts/robotobold.woff') format('woff');
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+    url("../fonts/robotobold.woff2") format("woff2"),
+    url("../fonts/robotobold.woff") format("woff");
 }
 
 /* ------------------------------------------------------------ */
@@ -141,8 +141,10 @@ img {
 /* --------------------Buttons-------------------- */
 /* ------------------------------------------------------------ */
 .button {
+  display: inline-block;
   margin: 0;
   padding: 15px 40px 16px 39px;
+  min-height: 19px;
   font: inherit;
   font-weight: 500;
   line-height: 18px;
@@ -205,7 +207,7 @@ img {
   margin: 0;
   padding: 0;
   padding-top: 17px;
-  padding-right: 60px;
+  padding-right: 40px;
   color: var(--black);
   list-style: none;
 }
@@ -248,7 +250,7 @@ img {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -20px;
+  bottom: -21px;
   width: 100%;
   border-bottom: 2px solid var(--btn);
 }
@@ -257,14 +259,15 @@ img {
   position: relative;
   justify-self: flex-end;
   align-self: center;
-  padding-left: 25px;
   padding-top: 17px;
+  padding-left: 45px;
+  padding-right: 0;
 }
 
 .main-nav__user-cart::before {
   content: "";
   position: absolute;
-  left: -15px;
+  left: 4px;
   top: 25px;
   width: 15px;
   height: 15px;
@@ -309,7 +312,7 @@ img {
 
 .carousel__slide-text {
   max-width: 370px;
-  margin-bottom: 51px;
+  margin-bottom: 38px;
   line-height: 25px;
 }
 
@@ -356,8 +359,14 @@ img {
   margin-right: 0;
 }
 
+.carousel__controls-button,
 .carousel__controls-button--active {
   outline: none
+}
+
+.carousel__controls-button:hover {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .carousel__controls-button--active::after {
@@ -380,7 +389,7 @@ img {
 /* --------------------Works-------------------- */
 /* ------------------------------------------------------------ */
 .works {
-  margin-bottom: 39px;
+  margin-bottom: 36px;
 }
 
 .works__list {
@@ -391,9 +400,13 @@ img {
   justify-content: start;
   margin: 0;
   padding: 0;
-  padding-bottom: 90px;
+  padding-bottom: 40px;
   list-style: none;
   border-bottom: 2px solid var(--bg-grey);
+}
+
+.works__list-item {
+  padding-bottom: 40px;
 }
 
 .works__list-title {
@@ -410,7 +423,7 @@ img {
 .works__list-text {
   max-width: 260px;
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 32px;
   padding: 0;
 }
 
@@ -633,7 +646,7 @@ img {
 .catalog {
   justify-self: end;
   width: 760px;
-  padding-bottom: 60px
+  padding-bottom: 50px
 }
 
 .catalog__title-wrapper {
@@ -681,6 +694,10 @@ img {
   cursor: default;
 }
 
+.catalog__sort-link {
+  color: inherit;
+}
+
 .catalog__sort-button {
   width: 16px;
   height: 16px;
@@ -702,7 +719,7 @@ img {
 .catalog__sort-button:hover,
 .catalog__sort-item:hover,
 .catalog__sort-button:focus,
-.catalog__sort-item:focus {
+.catalog__sort-item:focus-within {
   opacity: 0.6;
 }
 
@@ -713,7 +730,8 @@ img {
 .catalog__sort-item:active,
 .catalog__sort-item--active,
 .catalog__sort-item--active:hover,
-.catalog__sort-item--active:focus {
+.catalog__sort-item--active:focus,
+.catalog__sort-item--active:focus-within {
   opacity: 1;
 }
 
@@ -752,7 +770,8 @@ img {
 }
 
 .product-sample:hover,
-.product-sample:focus {
+.product-sample:focus,
+.product-sample:focus-within .product-sample__description {
   border-top-color: var(--product-border);
   box-shadow: 0 6px 15px var(--shadow-product);
 }
@@ -779,11 +798,8 @@ img {
 }
 
 .product-sample:hover .product-sample__description,
-.product-sample:focus .product-sample__description
-
-/* .product-sample__title--link:focus .product-sample__description,
-.product-sample__button:focus .product-sample__description */
-  {
+.product-sample:focus .product-sample__description,
+.product-sample:focus-within .product-sample__description {
   opacity: 1;
 }
 
@@ -802,7 +818,7 @@ img {
 
 .product-sample__text {
   margin: 0;
-  margin-bottom: 48px;
+  margin-bottom: 35px;
   max-height: 380px;
   font-weight: 400;
   line-height: 18px;
@@ -810,7 +826,6 @@ img {
 }
 
 .product-sample__button {
-  margin-top: 32px;
   padding: 16px 73px 15px;
 }
 
@@ -1042,16 +1057,18 @@ img {
 /* ------------------------------------------------------------ */
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  align-self: center;
 }
 
 .pagination-button {
+  padding: 15px 21px 16px;
   align-self: center;
-  width: 50px;
-  height: 50px;
-  margin-right: 11px;
-  line-height: 50px;
+  /* width: 50px; */
+  /* height: 50px; */
+  margin-right: 10px;
+  margin-bottom: 10px;
+  /* line-height: 50px; */
   color: var(--black);
   text-align: center;
   text-transform: uppercase;
@@ -1060,7 +1077,7 @@ img {
 }
 
 .pagination-button__next {
-  min-width: 260px;
+  min-width: 218px;
 }
 
 .pagination-button--current,
@@ -1282,7 +1299,7 @@ img {
 
 .feedback--active .feedback {
   opacity: 1;
-  transform: perspective(600px) translate(0, 20%) rotateX(0);
+  transform: perspective(600px) translate(0, 25%) rotateX(0);
   transition: all 0.8s ease 0s;
 }
 

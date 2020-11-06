@@ -9,7 +9,7 @@ const ctrlBtn2 = carousel.querySelector('.carousel__controls-button--2');
 const ctrlBtn3 = carousel.querySelector('.carousel__controls-button--3');
 
 
-ctrlBtn1.addEventListener('click', function (evt) {
+ctrlBtn1.addEventListener('click', function(evt) {
   evt.preventDefault();
   ctrlBtn1.classList.add('carousel__controls-button--active');
   ctrlBtn2.classList.remove('carousel__controls-button--active');
@@ -19,7 +19,7 @@ ctrlBtn1.addEventListener('click', function (evt) {
   slideThree.classList.remove('carousel__slide--active');
 });
 
-ctrlBtn2.addEventListener('click', function (evt) {
+ctrlBtn2.addEventListener('click', function(evt) {
   evt.preventDefault();
   ctrlBtn2.classList.add('carousel__controls-button--active');
   ctrlBtn1.classList.remove('carousel__controls-button--active');
@@ -29,7 +29,7 @@ ctrlBtn2.addEventListener('click', function (evt) {
   slideThree.classList.remove('carousel__slide--active');
 });
 
-ctrlBtn3.addEventListener('click', function (evt) {
+ctrlBtn3.addEventListener('click', function(evt) {
   evt.preventDefault();
   ctrlBtn3.classList.add('carousel__controls-button--active');
   ctrlBtn1.classList.remove('carousel__controls-button--active');

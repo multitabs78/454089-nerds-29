@@ -14,7 +14,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: local("Roboto Medium"), local('Roboto-Medium'),
+  src: local("Roboto Medium"), local("Roboto-Medium"),
     url("../fonts/robotomedium.woff2") format("woff2"),
     url("../fonts/robotomedium.woff") format("woff");
 }
@@ -74,7 +74,7 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 40px;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -462,7 +462,7 @@ img {
 .content-wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  margin-bottom: 50px;
+  margin-bottom: 49px;
   padding-bottom: 49px;
   border-bottom: 2px solid var(--bg-grey);
 }
@@ -579,23 +579,20 @@ img {
 /* ------------------------------------------------------------ */
 .partners {
   margin-bottom: 80px;
-  padding-bottom: 33px;
+  padding-bottom: 35px;
   border-bottom: 2px solid var(--bg-grey);
 }
 
 .partners__list {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  padding-right: 24px;
-  padding-left: 26px;
   list-style: none;
 }
 
 .partners__link {
+  align-self: center;
   opacity: 0.2;
 }
 
@@ -610,21 +607,24 @@ img {
 
 .partners__list-item {
   position: relative;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
-  align-items: center;
-  min-width: 209px;
-  min-height: 97px;
+  min-width: 260px;
+  padding-right: 40px;
 }
 
 .partners__list-item::after {
   content: "";
   position: absolute;
   top: 15%;
-  right: -22%;
+  right: 19px;
   width: 2px;
   height: 52px;
   background-color: var(--bg-grey);
+}
+
+.partners__list-item:nth-child(4n) {
+  padding-right: 0;
 }
 
 .partners__list-item:nth-child(4n)::after {
@@ -825,7 +825,7 @@ img {
 .product-sample__text {
   margin: 0;
   margin-bottom: 35px;
-  max-height: 380px;
+  min-height: 35px;
   font-weight: 400;
   line-height: 18px;
   color: var(--contacts-text);
@@ -934,13 +934,6 @@ img {
   background-color: var(--bg-grey);
   border: none;
   border-radius: 5px;
-  -moz-appearance: textfield;
-}
-
-.range-filter-price::-webkit-outer-spin-button,
-.range-filter-price::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 
 .min-price,
@@ -1070,11 +1063,8 @@ img {
 .pagination-button {
   padding: 15px 21px 16px;
   align-self: center;
-  /* width: 50px; */
-  /* height: 50px; */
   margin-right: 10px;
   margin-bottom: 10px;
-  /* line-height: 50px; */
   color: var(--black);
   text-align: center;
   text-transform: uppercase;

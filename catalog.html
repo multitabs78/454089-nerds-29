@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize-minimize.css" rel="stylesheet">
     <link href="css/style-minimize.css" rel="stylesheet">
   </head>
 
@@ -39,15 +39,15 @@
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0"></div>
-                <div class="toggle toggle-max" tabindex="0"></div>
+                <div class="toggle toggle-min" tabindex="0"><span class="visually-hidden">Выбор минимальной стоимости</span></div>
+                <div class="toggle toggle-max" tabindex="0"><span class="visually-hidden">Выбор максимальной стоимости</span></div>
               </div>
               <div class="price-controls">
                 <label class="min-price">
-                  от <input class="range-filter-price" type="number" name="min-price" value="0">
+                  от <input class="range-filter-price" type="text" name="min-price" value="0">
                 </label>
                 <label class="max-price">
-                  до <input class="range-filter-price" type="number" name="max-price" value="15000">
+                  до <input class="range-filter-price" type="text" name="max-price" value="15000">
                 </label>
               </div>
             </div>
@@ -174,7 +174,7 @@
     <footer class="main-footer">
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <img class="contacts__reserve-map" src="img/map_bg.png" width="1440" height="416" alt="Местоположение нашего офиса">
+        <img class="contacts__reserve-map" src="img/map-bg.png" width="1440" height="416" alt="Местоположение нашего офиса">
         <div class="contacts__map" id="map">
         </div>
         <div class="container">

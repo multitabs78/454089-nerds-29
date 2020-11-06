@@ -795,7 +795,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  min-height: 161px;
+  max-height: 88%;
   padding: 26px 52px 42px;
   text-align: center;
   background-color: var(--bg-grey);
@@ -826,9 +826,12 @@ img {
   margin: 0;
   margin-bottom: 35px;
   min-height: 35px;
+  max-height: 380px;
   font-weight: 400;
   line-height: 18px;
   color: var(--contacts-text);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .product-sample__button {

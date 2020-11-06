@@ -795,12 +795,19 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  max-height: 88%;
+  max-height: 89%;
   padding: 26px 52px 42px;
   text-align: center;
   background-color: var(--bg-grey);
   border-radius: 0 0 3px 3px;
   opacity: 0;
+}
+
+.product-sample__description-wrapper {
+  max-height: 450px;
+  margin-bottom: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .product-sample:hover .product-sample__description,
@@ -812,6 +819,9 @@ img {
 .product-sample__title {
   margin: 0px;
   margin-bottom: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .product-sample__title--link {
@@ -824,9 +834,9 @@ img {
 
 .product-sample__text {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   min-height: 35px;
-  max-height: 380px;
+  max-height: 370px;
   font-weight: 400;
   line-height: 18px;
   color: var(--contacts-text);
